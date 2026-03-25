@@ -1,0 +1,214 @@
+/* Configuración Global y Herencia */
+:root {
+  --starbucks-green: #007042;
+  --starbucks-dark: #1e3932;
+  --starbucks-text: #212121;
+  --starbucks-gray: #f7f7f7;
+  --border-color: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--starbucks-text);
+  background-color: white;
+  line-height: 1.5;
+}
+
+/* Herencia de estilos de texto */
+header,
+main,
+footer {
+  width: 100%;
+}
+
+/* Header Semántico */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 100px;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: var(--starbucks-green);
+}
+
+/* Botones y Acciones */
+aside {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+aside a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: all 0.2s;
+}
+
+button.secondary {
+  background: transparent;
+  border: 1px solid black;
+}
+
+button.primary {
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Contenido Principal */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Hero Section */
+section.hero {
+  margin-bottom: 50px;
+}
+
+section.hero p {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+section.hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* Menú Section */
+section.menu-category {
+  margin-top: 40px;
+}
+
+section.menu-category h2 {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 60px;
+}
+
+/* Grid de Productos usando Article y Figure */
+section.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 80px 40px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0 0 20px 0;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  background-color: var(--starbucks-dark);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+article:hover figure {
+  transform: translateY(-8px);
+}
+
+figure img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+figcaption {
+  font-weight: 800;
+  font-size: 19px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  padding: 40px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+
+  nav ul,
+  aside a span:last-child,
+  aside button {
+    display: none;
+  }
+
+  section.grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
