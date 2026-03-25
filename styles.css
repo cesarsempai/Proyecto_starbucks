@@ -1,8 +1,8 @@
 /* Colores guardados */
 :root {
   --starbucks-green: #026334;
-  --starbucks-house-green: #026334;
-  --starbucks-warm-white: #f1f8f6;
+  --starbucks-house-green: #BDBB8C;
+  --starbucks-warm-white: #F7F0E4; /* Hola proteina */
   --text-black: #000000;
   --text-gray: rgba(0, 0, 0, 0.58);
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
@@ -163,6 +163,9 @@ figure img {
   object-fit: cover;
 }
 
+article h1 {
+  color: #00530b;
+}
 h1 {
   font-size: 48px;
   margin-bottom: 24px;
@@ -215,7 +218,7 @@ p {
 }
 
 .clase3 {
-  background-color: #0070ba;
+  background-color: #3B4F35;
   color: #fff;
 }
 
@@ -227,7 +230,7 @@ p {
 }
 
 .clase4 {
-  background-color: #ffc220;
+  background-color: #107A4A;
   color: #1e3932;
 }
 
